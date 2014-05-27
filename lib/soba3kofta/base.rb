@@ -1,24 +1,4 @@
 module Soba3kofta 
-  module Salata 
-    extend Mushin::DSL::Notebook 
-    #Mushin::DSL::Notebook.build 'mohema', 'law', 'edelo' 
-  end
-
-  class Middleware 
-    include Mushin::Customization 
-  end
-
-  class Env < Mushin::Env
-    @@domain_folder = "soba3kofta"
-
-    @@ds = 'Soba3kofta::Persistence::DS'
-    def Env.get id
-      Soba3kofta::Persistence::DS.load id
-    end
-  end
-end
-
-module Soba3kofta 
 
   module Middleware 
     include Mushin::Domain::Middleware
